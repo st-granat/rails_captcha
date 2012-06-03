@@ -2,15 +2,15 @@ $(document).ready(function() {
   $('#captcha_image_container').html("<%= escape_javascript image_tag("/images/captchas/#{Rails.env.to_s}/#{session[:captcha]}.jpg", :id => "captcha_image", :rel => Rails.env.to_s, :alt => "Защитная картинка") %>");
   $("#update_captcha").click(function () {
     var env = $('#captcha_image_container').attr('class');
-		$.ajax({
-			type: "GET",
-			url: '/captcha/captcha.js',
-			dataType: "html",
-			success: function(data){
+    $.ajax({
+      type: "GET",
+      url: '/captcha/captcha.js',
+      dataType: "html",
+      success: function(data){
         $('#captcha_image_container').html('<img id="captcha_image" src="'+'/images/captchas/'+env+'/'+data+'.jpg'+'" alt="Защитная картинка" />');
-			},
-			error: function(result) { alert('Captcha ERROR'); }
-		});
+      },
+      error: function(result) { alert('Captcha ERROR'); }
+    });
     return false;
   });
 });
