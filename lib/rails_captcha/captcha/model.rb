@@ -36,7 +36,7 @@ module RailsCaptcha
             self.errors.add_to_base(
               case self.captcha_options[:base]
               when true
-                "Enter the correct text in the image (6 characters)"
+                I18n.t("rails_captcha.enter_the_correct_captcha")
               else
                 self.captcha_options[:base]
               end
@@ -45,7 +45,7 @@ module RailsCaptcha
             self.errors.add(:captcha,
               case self.captcha_options[:field]
               when true, nil
-                "Неверный защитный код."
+                I18n.t("rails_captcha.wrong_captcha")
               else
                 self.captcha_options[:field]
               end

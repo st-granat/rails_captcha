@@ -2,3 +2,5 @@ ru:
   rails_captcha:
     security_code: Защитный код
     update: Обновить
+    enter_the_correct_captcha: Введите корректный текст с защитной картинки
+    wrong_captcha: Неверный защитный код
