@@ -1,0 +1,4 @@
+ru:
+  rails_captcha:
+    security_code: Защитный код
+    update: Обновить

@@ -1,0 +1,9 @@
+<label for="captcha">
+  <%= t('rails_captcha.security_code') %>
+  (<a id="update_captcha" href="javascript://"><%= t('rails_captcha.update') %></a>)
+</label>
+<% unless object.errors[:captcha].blank? %>
+  <span class="error"><%= object.errors[:captcha].join %></span>
+<% end %>
+<span class="<%= Rails.env.to_s %>" id="captcha_image_container">&nbsp;</span>
+<%= text_field_tag :captcha, nil, :maxlength => "6" %>
