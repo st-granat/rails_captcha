@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = RailsCaptcha::VERSION
   s.authors     = ["Andrey"]
   s.email       = ["railscode@gmail.com"]
-  s.homepage    = "TODO"
+  s.homepage    = "https://github.com/vav/rails_captcha"
   s.summary     = "Rails Captcha Engine for Rails 3 applications"
   s.description = "It's a Rails Captcha Engine for Rails 3 applications."
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
