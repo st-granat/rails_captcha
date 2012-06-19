@@ -1,5 +1,5 @@
 <label for="captcha">
-  <%= t('rails_captcha.security_code') %>
+  <%= t('rails_captcha.security_code') %>&nbsp;<span class="required">*</span>&nbsp;
   (<a id="update_captcha" href="javascript://"><%= t('rails_captcha.update') %></a>)
 </label>
 <% unless object.errors[:captcha].blank? %>
