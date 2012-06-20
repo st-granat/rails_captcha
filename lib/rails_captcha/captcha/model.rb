@@ -30,7 +30,7 @@ module RailsCaptcha
 
       def captcha_must_match_known_captcha
         return true if self.captcha.nil? || self.known_captcha.nil?
-        decrypted = RailsCaptcha::Cipher.decrypt(self.known_captcha)
+        decrypted = RailsCaptcha::Cipher.decrypt(self.known_captcha) rescue "no_decrypt"
         if self.captcha.strip.downcase != decrypted
           if self.captcha_options[:base]
             self.errors.add_to_base(
