@@ -1,6 +1,5 @@
 $(document).ready(function() {
-  $('#captcha_image_container').html("<%= escape_javascript image_tag("/images/captchas/#{Rails.env.to_s}/#{session[:captcha]}.jpg", :id => "captcha_image", :rel => Rails.env.to_s, :alt => t('rails_captcha.security_code')) %>");
-  $("#update_captcha").click(function () {
+  function rails_captcha_request() {
     var env = $('#captcha_image_container').attr('class');
     $.ajax({
       type: "GET",
@@ -11,6 +10,10 @@ $(document).ready(function() {
       },
       error: function(result) { alert('Captcha ERROR'); }
     });
+  }
+  rails_captcha_request();
+  $("#update_captcha").click(function () {
+    rails_captcha_request();
     return false;
   });
 });
