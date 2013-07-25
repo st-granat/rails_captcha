@@ -5,6 +5,7 @@ require "rails_captcha/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
+  s.license     = "MIT"
   s.name        = "rails_captcha"
   s.version     = RailsCaptcha::VERSION
   s.authors     = ["Andrey"]
